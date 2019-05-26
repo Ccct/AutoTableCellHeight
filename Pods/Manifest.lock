@@ -1,0 +1,52 @@
+PODS:
+  - AsyncDisplayKit (2.2.1):
+    - AsyncDisplayKit/PINRemoteImage (= 2.2.1)
+  - AsyncDisplayKit/Core (2.2.1)
+  - AsyncDisplayKit/PINRemoteImage (2.2.1):
+    - AsyncDisplayKit/Core
+    - PINRemoteImage/iOS (= 3.0.0-beta.8)
+    - PINRemoteImage/PINCache
+  - PINCache (3.0.1-beta.4):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.4)
+    - PINCache/Core (= 3.0.1-beta.4)
+  - PINCache/Arc-exception-safe (3.0.1-beta.4):
+    - PINCache/Core
+  - PINCache/Core (3.0.1-beta.4):
+    - PINOperation (= 1.0.3)
+  - PINOperation (1.0.3)
+  - PINRemoteImage/Core (3.0.0-beta.8)
+  - PINRemoteImage/iOS (3.0.0-beta.8):
+    - PINRemoteImage/Core
+  - PINRemoteImage/PINCache (3.0.0-beta.8):
+    - PINCache (= 3.0.1-beta.4)
+    - PINRemoteImage/Core
+  - "UITableView+FDTemplateLayoutCell (1.6)"
+  - YYKit (1.0.9):
+    - YYKit/no-arc (= 1.0.9)
+  - YYKit/no-arc (1.0.9)
+
+DEPENDENCIES:
+  - AsyncDisplayKit
+  - "UITableView+FDTemplateLayoutCell"
+  - YYKit (~> 1.0.7)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AsyncDisplayKit
+    - PINCache
+    - PINOperation
+    - PINRemoteImage
+    - "UITableView+FDTemplateLayoutCell"
+    - YYKit
+
+SPEC CHECKSUMS:
+  AsyncDisplayKit: 2234dd8d8770a5ed72936b3f8394bd5a807765f6
+  PINCache: a89c8f609232afac77128557bd12c861844423d7
+  PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
+  PINRemoteImage: c4f9f16932840c597f32e69dd288e10e111a1929
+  "UITableView+FDTemplateLayoutCell": 5c949b4a5059c404b442926c0e80f81d10a2d66f
+  YYKit: 7cda43304a8dc3696c449041e2cb3107b4e236e7
+
+PODFILE CHECKSUM: 3919d6c1f81cbc68c881a527bcfc8b17fd201167
+
+COCOAPODS: 1.6.0.beta.2

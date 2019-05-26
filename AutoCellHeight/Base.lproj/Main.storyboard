@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nVH-SM-3mt">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3EG-qH-Nsg">
+                                <rect key="frame" x="34" y="211" width="345" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="XLg-FT-ehw"/>
+                                </constraints>
+                                <state key="normal" title="1:estimatedHeight"/>
+                                <connections>
+                                    <action selector="EstimateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="K4z-z5-YBF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vrN-Oy-iGg">
+                                <rect key="frame" x="34" y="280" width="345" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Kln-hX-Zm2"/>
+                                </constraints>
+                                <state key="normal" title="2:FDTemplateLayout"/>
+                                <connections>
+                                    <action selector="FDTemplateAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3PE-7B-Ttj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AnN-Cf-b3F">
+                                <rect key="frame" x="35" y="345" width="345" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="YbO-Hl-6i1"/>
+                                </constraints>
+                                <state key="normal" title="3:AutoLayout+CountHeight"/>
+                                <connections>
+                                    <action selector="AutoLayoutCountHeightAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ide-Z4-qrM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdM-H4-VvZ">
+                                <rect key="frame" x="35" y="410" width="345" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="y3O-bl-qsY"/>
+                                </constraints>
+                                <state key="normal" title="4:FrameLayout+CountHeight"/>
+                                <connections>
+                                    <action selector="FrameLayoutHeight:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ivR-D0-KSI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQd-rc-qnC">
+                                <rect key="frame" x="35" y="475" width="345" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="RkC-qt-2EU"/>
+                                </constraints>
+                                <state key="normal" title="5:YYKit + CountHeight"/>
+                                <connections>
+                                    <action selector="YYKitCountHeightAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iLn-kU-137"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YN7-4D-8O8">
+                                <rect key="frame" x="35" y="540" width="345" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="9W7-UK-7CC"/>
+                                </constraints>
+                                <state key="normal" title="6:AsyncDisplayKit + CountHeight"/>
+                                <connections>
+                                    <action selector="AsyncDisplayKitAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d6d-Un-7jI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="yQd-rc-qnC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="4Ta-8O-jdW"/>
+                            <constraint firstItem="3EG-qH-Nsg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="B4B-eU-g61"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3EG-qH-Nsg" secondAttribute="trailing" constant="35" id="D10-D6-mW3"/>
+                            <constraint firstItem="vrN-Oy-iGg" firstAttribute="top" secondItem="3EG-qH-Nsg" secondAttribute="bottom" constant="30" id="IkB-dL-r8Z"/>
+                            <constraint firstItem="YN7-4D-8O8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="NEf-e4-frS"/>
+                            <constraint firstItem="AnN-Cf-b3F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="Srp-30-Lru"/>
+                            <constraint firstItem="3EG-qH-Nsg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="aU9-1T-yiG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VdM-H4-VvZ" secondAttribute="trailing" constant="34" id="c6r-DW-wa8"/>
+                            <constraint firstItem="vrN-Oy-iGg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="gvI-3o-Lxe"/>
+                            <constraint firstItem="AnN-Cf-b3F" firstAttribute="top" secondItem="vrN-Oy-iGg" secondAttribute="bottom" constant="26" id="nip-92-eqi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="AnN-Cf-b3F" secondAttribute="trailing" constant="34" id="skV-N3-O6B"/>
+                            <constraint firstItem="VdM-H4-VvZ" firstAttribute="top" secondItem="AnN-Cf-b3F" secondAttribute="bottom" constant="26" id="tPH-Gc-6eT"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vrN-Oy-iGg" secondAttribute="trailing" constant="35" id="tyV-mN-9PA"/>
+                            <constraint firstItem="YN7-4D-8O8" firstAttribute="top" secondItem="yQd-rc-qnC" secondAttribute="bottom" constant="26" id="uvI-W6-HIE"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YN7-4D-8O8" secondAttribute="trailing" constant="34" id="wMn-a2-HH2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yQd-rc-qnC" secondAttribute="trailing" constant="34" id="wda-L6-JjS"/>
+                            <constraint firstItem="yQd-rc-qnC" firstAttribute="top" secondItem="VdM-H4-VvZ" secondAttribute="bottom" constant="26" id="wnw-Td-EL0"/>
+                            <constraint firstItem="VdM-H4-VvZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="xNq-aK-cz1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="eL7-gV-e9D"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1643" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="jl5-Oq-Py4">
+            <objects>
+                <navigationController id="nVH-SM-3mt" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fKd-Zc-Enf">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="ync-sr-cNA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1p-d2-Th2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="129"/>
+        </scene>
+    </scenes>
+</document>
