@@ -45,7 +45,20 @@
         _tableView.delegate   =self;
         _tableView.dataSource =self;
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_tableView registerNib:[UINib nibWithNibName:@"AutoHeightCell1TableViewCell" bundle:nil] forCellReuseIdentifier:[AutoHeightCell1TableViewCell reuseIdentifier]];
+        //优化tableview
+        _tableView.delaysContentTouches = NO;
+        _tableView.canCancelContentTouches = YES;
+        UIView *wrapView = self.tableView.subviews.firstObject;
+        if (wrapView && [NSStringFromClass(wrapView.class) hasSuffix:@"WrapperView"]) {
+            for (UIGestureRecognizer *gesture in wrapView.gestureRecognizers) {
+                if ([NSStringFromClass(gesture.class) containsString:@"DelayedTouchesBegan"] ) {
+                    gesture.enabled = NO;
+                    break;
+                }
+            }
+        }
+        //注册cell
+        [_tableView registerNib:[UINib nibWithNibName:@"AutoHeightCell1TableViewCell" bundle:nil] forCellReuseIdentifier:NSStringFromClass([AutoHeightCell1TableViewCell class])];
     }
     return _tableView;
 }
@@ -58,7 +71,7 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    AutoHeightCell1TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[AutoHeightCell1TableViewCell reuseIdentifier] forIndexPath:indexPath];
+    AutoHeightCell1TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AutoHeightCell1TableViewCell class]) forIndexPath:indexPath];
     [self setCell:cell atIndexPath:indexPath];
     return cell;
 }
@@ -68,7 +81,7 @@
     typeof(self) __weak weakSelf = self;
     
     //缓存高度
-    return [self.tableView fd_heightForCellWithIdentifier:[AutoHeightCell1TableViewCell reuseIdentifier] cacheByIndexPath:indexPath configuration:^(id cell) {
+    return [self.tableView fd_heightForCellWithIdentifier:NSStringFromClass([AutoHeightCell1TableViewCell class]) cacheByIndexPath:indexPath configuration:^(id cell) {
         
         [weakSelf setCell:cell atIndexPath:indexPath];
     }];

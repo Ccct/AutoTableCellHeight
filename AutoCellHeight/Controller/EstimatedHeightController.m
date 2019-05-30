@@ -49,7 +49,20 @@
         _tableView.dataSource =self;
         _tableView.rowHeight  = UITableViewAutomaticDimension; //注意这里要这样写
         _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        [_tableView registerNib:[UINib nibWithNibName:@"AutoHeightCell1TableViewCell" bundle:nil] forCellReuseIdentifier:[AutoHeightCell1TableViewCell reuseIdentifier]];
+        //优化tableview
+        _tableView.delaysContentTouches = NO;
+        _tableView.canCancelContentTouches = YES;
+        UIView *wrapView = self.tableView.subviews.firstObject;
+        if (wrapView && [NSStringFromClass(wrapView.class) hasSuffix:@"WrapperView"]) {
+            for (UIGestureRecognizer *gesture in wrapView.gestureRecognizers) {
+                if ([NSStringFromClass(gesture.class) containsString:@"DelayedTouchesBegan"] ) {
+                    gesture.enabled = NO;
+                    break;
+                }
+            }
+        }
+        //注册cell
+        [_tableView registerNib:[UINib nibWithNibName:@"AutoHeightCell1TableViewCell" bundle:nil] forCellReuseIdentifier:NSStringFromClass([AutoHeightCell1TableViewCell class])];
     }
     return _tableView;
 }
@@ -62,7 +75,7 @@
 
 - (UITableViewCell*)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    AutoHeightCell1TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:[AutoHeightCell1TableViewCell reuseIdentifier] forIndexPath:indexPath];
+    AutoHeightCell1TableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:NSStringFromClass([AutoHeightCell1TableViewCell class]) forIndexPath:indexPath];
     [cell loadCellData:self.cellData[indexPath.row]];
     return cell;
 }

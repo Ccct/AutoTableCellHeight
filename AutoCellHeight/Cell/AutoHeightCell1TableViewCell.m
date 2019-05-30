@@ -35,13 +35,4 @@
     self.imgeView.image = [UIImage imageNamed:@"cellImage"];
 }
 
-+ (NSString *)reuseIdentifier {
-    static NSString *reuseIdentifier;
-    static dispatch_once_t onceToken;
-    dispatch_once(&onceToken, ^{
-        reuseIdentifier = NSStringFromClass([self class]);
-    });
-    return reuseIdentifier;
-}
-
 @end

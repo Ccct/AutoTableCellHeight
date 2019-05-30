@@ -12,8 +12,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface AutoHeightCell1TableViewCell : UITableViewCell
 
-+ (NSString *)reuseIdentifier;
-
 -(void)loadCellData:(NSDictionary *)data;
 
 @end
